@@ -1,1 +1,80 @@
+create database integratedappsapplication;
+use integratedappsapplication;
 
+insert into integrated_apps values("MIS","assets\imgs\apps\mis.png","Management Information System","active","assets\imgs\status\active.png");
+insert into integrated_apps values("Nucleus","assets\imgs\apps\nucleus.png","User Management","active","assets\imgs\status\active.png");
+insert into integrated_apps values("Genie X","assets\imgs\apps\geniex.png","Ticketing System","active","assets\imgs\status\active.png");
+insert into integrated_apps values("Lakshya","assets\imgs\apps\lakshya.png","Performance Management","active","assets\imgs\status\active.png");
+insert into integrated_apps values("Leave Management","assets\imgs\apps\leave.png","Employee Leave Management","inactive","assets\imgs\status\inactive.png");
+insert into integrated_apps values("Time Sheets","assets\imgs\apps\time.png","Employee Time Sheets","inactive","assets\imgs\status\inactive.png");
+insert into integrated_apps values("Onboarding","assets\imgs\apps\onboarding.png","Onboarding of Employees","inactive","assets\imgs\status\inactive.png");
+insert into integrated_apps values("Recruit","assets\imgs\apps\recruit.png","Employee Recruitment","inactive","assets\imgs\status\inactive.png");
+insert into integrated_apps values("Administration","assets\imgs\apps\administration.png","iportal Administration","inactive","assets\imgs\status\inactive.png");
+insert into integrated_apps values("Expenses","assets\imgs\apps\expense.png","Expense claim","inactive","assets\imgs\status\inactive.png");
+
+update integrated_apps set description="iportal Administration" where appname="Administration";
+
+update integrated_apps set status="Active" where app_name="MIS";
+update integrated_apps set status="Active" where app_name="Nucleus";
+update integrated_apps set status="Active" where app_name="Genie X";
+update integrated_apps set status="Active" where app_name="Lakshya";
+update integrated_apps set status="Inactive" where app_name="Leave Management";
+update integrated_apps set status="Inactive" where app_name="Time Sheets";
+update integrated_apps set status="Inactive" where app_name="Onboarding";
+update integrated_apps set status="Inactive" where app_name="Recruit";
+update integrated_apps set status="Inactive" where app_name="Administration";
+update integrated_apps set status="Inactive" where app_name="Expenses";
+
+update integrated_apps set status_img="/assets/imgs/status/active.png" where app_name="MIS";
+update integrated_apps set status_img="/assets/imgs/status/active.png" where app_name="Nucleus";
+update integrated_apps set status_img="/assets/imgs/status/active.png" where app_name="Genie X";
+update integrated_apps set status_img="/assets/imgs/status/active.png" where app_name="Lakshya";
+update integrated_apps set status_img="/assets/imgs/status/inactive.png" where app_name="Leave Management";
+update integrated_apps set status_img="/assets/imgs/status/inactive.png" where app_name="Time Sheets";
+update integrated_apps set status_img="/assets/imgs/status/inactive.png" where app_name="Onboarding";
+update integrated_apps set status_img="/assets/imgs/status/inactive.png" where app_name="Recruit";
+update integrated_apps set status_img="/assets/imgs/status/inactive.png" where app_name="Administration";
+update integrated_apps set status_img="/assets/imgs/status/inactive.png" where app_name="Expenses";
+
+update integrated_apps set app_img="/assets/imgs/apps/mis.png" where app_name="MIS";
+update integrated_apps set app_img="/assets/imgs/apps/nucleus.png" where app_name="Nucleus";
+update integrated_apps set app_img="/assets/imgs/apps/geniex.png" where app_name="Genie X";
+update integrated_apps set app_img="/assets/imgs/apps/lakshya.png" where app_name="Lakshya";
+update integrated_apps set app_img="/assets/imgs/apps/leave.png" where app_name="Leave Management";
+update integrated_apps set app_img="/assets/imgs/apps/time.png" where app_name="Time Sheets";
+update integrated_apps set app_img="/assets/imgs/apps/onboarding.png" where app_name="Onboarding";
+update integrated_apps set app_img="/assets/imgs/apps/recruit.png" where app_name="Recruit";
+update integrated_apps set app_img="/assets/imgs/apps/administration.png" where app_name="Administration";
+update integrated_apps set app_img="/assets/imgs/apps/expense.png" where app_name="Expenses";
+
+
+
+insert into user values(3278,"Kamal Anand");
+insert into user values(5115,"Sashi Kumar");
+insert into user values(4181,"Sathish Hanumantha");
+insert into user values(5486,"Narasimhan Suseendran");
+insert into user values(879,"Sentheel Kumaran");
+insert into user values(6026,"Thanu Priya");
+
+
+delete from employees where emp_id=6009;
+select *from apps; 
+insert into admin values(3278,"Kamal Anand");
+insert into admin values(5115,"Sashi Kumar");
+insert into admin values(4181,"Sathish Hanumantha");
+insert into admin values(5486,"Narasimhan Suseendran");
+insert into admin values(879,"Sentheel Kumaran");
+insert into admin values(6026,"Thanu Priya");
+
+ update employees set emp_admin_privillages=1 where emp_id=6026;
+ 
+select * from employees;
+
+select * from integrated_apps;
+
+insert into employees values(3278,0,"Kamal"," Anand");
+insert into employees values(5115,0,"Sashi","Kumar");
+insert into employees values(4181,0,"Sathish","Hanumantha");
+insert into employees values(5486,0,"Narasimhan"," Suseendran");
+insert into employees values(879,0,"Sentheel"," Kumaran");
+insert into employees values(6026,0,"Thanu"," Priya");
